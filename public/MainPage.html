@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blood Bank</title>
+  <link rel="stylesheet" href="MainPage.css">
+  <Script src="MainPage.js" defer></Script>
+</head>
+<body>
+
+  <h1>Blood Bank</h1>
+
+  <div class="container">
+    <label for="BloodGroupSelection">Need Blood Group: </label>
+    <select id="BloodGroupSelection">
+      <option value="">None</option>
+      <option>O+</option><option>O-</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>AB+</option><option>AB-</option>
+    </select><br><br>
+
+    <label for="LocationInput">Enter Location for Donor Search:</label><br>
+    <input type="text" id="LocationInput" placeholder="Enter location"><br><br>
+
+    <button id="SearchButton">Search</button>
+  </div>
+  <div id="searchResults" style="max-width: 600px; margin: 20px auto; text-align: left; background:white;"></div>
+  <button onclick="toggleForm()" id="dButton">Be a Donor</button>
+
+  <div id="donorFormContainer">
+    <h2>Donor Registration</h2>
+    <form id="donorForm" onsubmit="submitDonorForm(event)">
+      <input type="text" id="name" placeholder="Enter name" required><br>
+      <input type="text" id="bloodGroup" placeholder="Enter blood group" required><br>
+      <input type="text" id="location" placeholder="Enter location" required><br>
+      <input type="text" id="phonenumber" placeholder="Enter phone number" required><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>
